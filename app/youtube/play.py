@@ -1,3 +1,6 @@
+import re
+import urllib.parse
+import urllib.request 
 
 def get_vid(query):
 
@@ -61,3 +64,9 @@ def create_youtube_url(command):
 
    if not video_id:
       return None
+
+return (
+  "https://www.youtube.com/embed/"
+  + video_id
+  + "?autoplay=1&muter=0"
+     
